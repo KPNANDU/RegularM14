@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="testngassignmnet2.testngyamaha">
+        <methods>
+          <include name="yamaha"/>
+        </methods>
+      </class> <!-- testngassignmnet2.testngyamaha -->
+      <class name="testngassignmnet2.testngkawasaki">
+        <methods>
+          <include name="kawasaki"/>
+        </methods>
+      </class> <!-- testngassignmnet2.testngkawasaki -->
+      <class name="testngassignmnet2.testngdavidson">
+        <methods>
+          <include name="davidson"/>
+        </methods>
+      </class> <!-- testngassignmnet2.testngdavidson -->
+      <class name="testngassignment1.testngreebok">
+        <methods>
+          <include name="reebok"/>
+        </methods>
+      </class> <!-- testngassignment1.testngreebok -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
