@@ -2,6 +2,7 @@ package dataprovider;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.sql.Driver;
 
 import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -11,9 +12,7 @@ import org.testng.annotations.Test;
 
 public class dataproviderwithexcel {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 @DataProvider(name="login")
+			 @DataProvider(name="login")
 		public Object[][]sender(){ 
 			 Object[][] obj = new Object[2] [2];
 			 File file= new File("");
@@ -21,7 +20,7 @@ public class dataproviderwithexcel {
              Workbook wbt= WorkbookFactory.create(fis);
              Sheet sheet = wbt.getSheet("Sheet1");
 
-			 obj[0] [0]= sheet.getRow(0).getCell(0).toString();
+			 obj[0][0]= sheet.getRow(0).getCell(0).toString();
 
 			 obj[0][1]=sheet.getRow(0).getCell(2).toString();
 
@@ -35,7 +34,8 @@ public class dataproviderwithexcel {
 
 			 public void receiver(String email, String password) {
 
-			 driver.get("https://demowebshop.tricentis.com/login");
+			
+			driver.get("https://demowebshop.tricentis.com/login");
 
 			 driver.findElement(By.id("Email")).sendKoya (email);
 
@@ -48,6 +48,6 @@ public class dataproviderwithexcel {
 			 
 		 }
 
-	}
+	
 
 
